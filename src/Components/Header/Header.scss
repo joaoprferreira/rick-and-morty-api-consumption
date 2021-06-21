@@ -2,7 +2,21 @@
 
 
  header {
-   width: 100vw;
+   display: flex;
+   max-width: 100%;
+   overflow-x: hidden;
    height: 201px;
-   background-color: #0C1440 ;
- }
+   background-color: #0C1440;
+   padding: 15px;
+
+
+    .logoMain{
+      height: 201px;
+      width: auto;
+    }
+
+    .TextMain {
+      font-family: 'Comic Sans MS Bold', arial;
+      color: #FFFFFF;
+    }
+ }  
