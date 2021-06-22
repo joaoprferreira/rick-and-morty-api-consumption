@@ -1,0 +1,30 @@
+@import "../../StyleGlobal";
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  border-radius:4px;
+  padding: 2px 8px;
+  background-color: white;
+  
+  svg {
+    color: hsl(0, 0%, 80%);
+  }
+
+  input {
+    width: 100%;
+    border: none;
+
+    &:focus {
+      border: none;
+      outline: none;
+    }
+
+    &::placeholder {
+      font-family: $fontMain;
+      font-size: 16px;
+      color: #808080;
+    }
+  }
+}
