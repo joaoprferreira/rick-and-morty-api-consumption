@@ -1,26 +1,29 @@
 @import "../../StyleGlobal";
 
-
  header {
    display: flex;
-   max-width: 100%;
-   overflow-x: hidden;
-   height: 201px;
+   gap: 15px;
+   width: 100%;
+   padding-left: 15px;
    background-color: #0C1440;
-   padding: 15px;
-
 
     .logoMain{
-      height: 201px;
+      height: 160px;
       width: auto;
     }
 
     .TextMain {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      padding: 30px 15px 0px;
+      width: 100%;
       font-family: 'Comic Sans MS Bold', arial;
-      color: #FFFFFF;
-      position: relative;
-      left: 15rem;
-      margin-top: 5px;
-      height: 15px;
+
+      .filterArea{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px
+      }
     }
  }  
