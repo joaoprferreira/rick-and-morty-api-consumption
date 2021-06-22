@@ -1,6 +1,22 @@
 @import "./variaveis/fonts";
 
-* {
-  margin: 0px;
-  padding: 0px;
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root, html, body {
+  height: 100%;
+  width: 100%;
+}
+
+ol, ul { 
+  list-style: none;
+}
+
+.white {
+  color: white;
 }
