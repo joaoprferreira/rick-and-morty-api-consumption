@@ -1,0 +1,45 @@
+@import "../../../StyleGlobal";
+
+.menuGenero {
+  height: 53px;
+  cursor: pointer;
+  position: relative;
+  top: 50px;
+  right: 15rem;
+
+  .menu { 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 292px;
+    height: 53px;
+    background-color: #0E60FF;
+    border-radius: 8px;
+
+    .menuHamburger{
+      width: 35px;
+      height: 20px;
+    }
+
+    .TextoDoGenero{
+      font-family: $fontMain;
+      color: #E8E7E7;
+      font-size: 36px;
+    }
+
+    .seta {
+      width: 34px;
+      height: 29px;
+    }
+  }
+
+  .openMenu {
+    background-color: hotpink;
+    height: 100px;
+    transition-duration: 1s;
+  }
+
+  .closedMenu{display: none;}
+
+
+}
