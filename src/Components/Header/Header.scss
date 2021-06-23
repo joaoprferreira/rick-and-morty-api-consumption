@@ -1,29 +1,54 @@
 @import "../../StyleGlobal";
 
- header {
-   display: flex;
-   gap: 15px;
-   width: 100%;
-   padding-left: 15px;
-   background-color: #0C1440;
+header {
+  @media (max-width: 885px){
+    grid-template-columns: repeat(3,1fr);
+  }
 
-    .logoMain{
-      height: 160px;
-      width: auto;
+  @media (max-width: 670px){
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  @media (max-width: 465px){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  padding: 0px 0px 15px 15px;
+  background-color: #0C1440;
+
+  .logoMain{
+    height: 160px;
+    width: auto;
+  }
+
+  .TextMain {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 30px 15px 0px;
+    width: 100%;
+    font-family: 'Comic Sans MS Bold', arial;
+    @media (max-width: 465px){
+      display: flex;
+      justify-content: center;
+      padding-top: 0;
     }
 
-    .TextMain {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      padding: 30px 15px 0px;
-      width: 100%;
-      font-family: 'Comic Sans MS Bold', arial;
+    .filterArea{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
 
-      .filterArea{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 20px
+      @media (max-width: 885px){
+        grid-template-columns: repeat(1,1fr);
       }
     }
- }  
+  }
+}  
