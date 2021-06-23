@@ -13,10 +13,22 @@
   width: 100%;
 }
 
+body{
+  background-color: #0C1440;
+}
+
 ol, ul { 
   list-style: none;
 }
 
 .white {
   color: white;
+}
+
+.MuiDialogContent-root {
+  background: #8B60E7; 
+}
+
+.MuiPaper-rounded {
+  border-radius: 20px !important;
 }
