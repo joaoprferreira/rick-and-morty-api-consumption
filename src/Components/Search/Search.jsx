@@ -5,8 +5,8 @@ import "./search.scss";
 export function Search({...props}){
   return (
     <div className="searchContainer">
-      <SearchIcon />
       <input type="text" {...props}/>
+      <SearchIcon />
     </div>
   )
 }
