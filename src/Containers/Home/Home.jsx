@@ -46,9 +46,9 @@ function Home({ characterList }) {
             alt={`imagem do personagem ${selectedCharacter.name}`}
           />
           <h2 className="nameCharacter" >{selectedCharacter.name}</h2>
-          <h3>{`Status - ${selectedCharacter.status}`}</h3>
-          <h3>{`Status - ${selectedCharacter.gender}`}</h3>
-          <h3>{`Status - ${selectedCharacter.species}`}</h3>
+          <h3>Status - <span>{selectedCharacter.status}</span></h3>
+          <h3>Gênero Sexual - <span>{selectedCharacter.gender}</span></h3>
+          <h3>Especie - <span>{`${selectedCharacter.species}`}</span> </h3>
         </Card>
       </Modal>
     </div>
