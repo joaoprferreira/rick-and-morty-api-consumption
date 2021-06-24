@@ -1,25 +1,29 @@
 @import "../../StyleGlobal.scss";
 
-.componentPagination{
+.componentPagination {
   display: flex;
   justify-content: center;
   background-color: transparent;
   width: 100%;
   gap: 15px;
 
-  .numberPagination { 
+  .numberPagination {
     font-family: $fontCard;
     font-size: 45px;
     color: white;
   }
 
-  .buttonBack{
+  .buttonBack {
     height: 35px;
     background-color: transparent;
     display: flex;
     align-items: center;
 
-    img{
+    &[disabled] {
+      opacity: 0;
+    }
+
+    img {
       height: 35px;
       transform: rotate(180deg);
       cursor: pointer;
@@ -29,7 +33,11 @@
   .buttonNext {
     height: 35px;
     background-color: transparent;
-  
+
+    &[disabled] {
+      opacity: 0;
+    }
+
     img {
       height: 35px;
       cursor: pointer;
