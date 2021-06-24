@@ -44,7 +44,6 @@ export const AppContextProvider = ({ children }) => {
   ])
 
   const getByFilter = useCallback(async ({ name, status, gender }) => {
-    console.log({name, status, gender})
     setCurrentPage(`${BaseUrl}/?name=${name}&status=${status}&gender=${gender}`)
   }, [])
 
