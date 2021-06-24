@@ -11,10 +11,17 @@
 
   @media (max-width: 465px){
     grid-template-columns: repeat(1,1fr);
-
   }
+
+  &--flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
   .card {
-    max-width: 320px ;
+    max-width: 320px;
+    background-color: none;
   }
 
   display: grid;
@@ -34,8 +41,34 @@
 
 }
 
+.cardModal {
+  background-color: #6034BF;
+  gap: 15px;
+  width: 333px;
+  height: 333px;
+  @media (max-width: 465px){
+    width: 100%;
+    height: auto;
+  }
+}
+
 .ImageModal{
   height: 140px;
   border-radius: 50%;
+}
 
+.nameModal {
+  font-family: $fontNameModal;
+  color:#F6E9E9;
+  font-size: 35px;
+}
+
+.TextModal {
+  color: #FFF4F0;
+  font-family: $fontModal;
+
+  .valueModal {
+   color: #F2CB05; 
+   font-family: $fontValueModal;
+  }
 }
