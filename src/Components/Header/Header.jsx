@@ -28,17 +28,18 @@ export default function Header() {
   }
 
   const handleSearch = (data) => {
-    clearTimeout(debounce)
-    debounce = setTimeout(() => {
-      setFilters({
-        ...filters,
-        [data.key]: data.value
-      })
-    },[600])
+    setFilters({
+      ...filters,
+      [data.key]: data.value
+    })
   }
 
   useEffect(() => {
-    getByFilter(filters)
+    clearTimeout(debounce);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    debounce = setTimeout(() => {
+      getByFilter(filters)
+    },[500])
   }, [
     filters,
     getByFilter
@@ -52,26 +53,28 @@ export default function Header() {
         <div className="filterArea">
           <Select
             options={optionsGenero}
-            placeholder="Genêro"
+            placeholder={filters.gender || "Genêro"}
             onChange={({ value }) => {
               handleChangeFilters({ value, key: "gender" })
             }}
+            value = {filters.gender}
           />
           <Select
             options={optionsStatus}
-            placeholder='Status'
+            placeholder={filters.status || "Status"}
             onChange={({ value }) => {
               handleChangeFilters({ value, key: "status" })
             }}
+            value = {filters.status}
           />
           <Search
             placeholder="Procurar"
-            onChange={({ target: { value, name } }) => {
+            onChange={({ target: { value } }) => {
               handleSearch({ value, key: "name" })
             }}
             value = {filters.name}
           />
-          <button onClick={() => setFilters(intialFiltersState)}>limpar</button>
+          <button onClick={() => setFilters(intialFiltersState)} className="buttonClearFilters">Limpar Filtros</button>
         </div>
       </div>
     </header>
